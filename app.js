@@ -32,7 +32,7 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: false,
-  cookie: {secure: true}
+  cookie: {secure: false}
 }))
 
 
@@ -44,9 +44,11 @@ app.use(passport.session())
 //STATIC FOLDER
 app.use(express.static(path.join(__dirname, 'public')))
 
+
 //ROUTES
 app.use('/', require('./routes/index'))
 app.use('/auth', require('./routes/auth'))
+
 
 const PORT = process.env.PORT || 5000
 
