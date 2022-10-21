@@ -18,7 +18,9 @@ const StorySchema = new mongoose.Schema({
   },
   user: {
     type: mongoose.Schema.Types.ObjectId, //unique so doesnt matter what names are -- TRULY UNIQUE
-    ref: 'User'
+    ref: 'User',
+    //!this field should be required bc the app will break if user not present
+    required: true
   },
   createdAt: {
     type: Date,
