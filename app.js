@@ -18,10 +18,16 @@ connectDB()
 
 const app = express()
 
+//BODY PARSER
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+
+
 //LOGGING
 if(process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
+
 
 //HANDLEBARS
 app.engine('.hbs', exphbs.engine({defaultLayout: 'main', extname: '.hbs'}))
