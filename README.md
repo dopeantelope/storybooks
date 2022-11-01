@@ -13,8 +13,8 @@ A CRUD application that uses Google Auth to authenticate users allowing them to 
 ## How to Run Locally
 
 Add .env file to config folder with PORT, MongoURI, Google Client ID & Google Client Secret<br>
-npm install
-npm run dev
+npm install<br>
+npm run dev<br>
 localhost
 
 ## Optimizations
